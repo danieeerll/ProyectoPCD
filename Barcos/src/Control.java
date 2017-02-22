@@ -2,6 +2,7 @@
  * Created by danie on 20/02/2017.
  */
 public class Control {
+    int quierenSalir;
     int entrada;
     int salida;
 
@@ -12,7 +13,7 @@ public class Control {
 
     public void permisoEntrada (Barco barco) {
         synchronized (this) {
-            while (salida > 0) {
+            while (salida > 0 || quierenSalir > 0) {
                 try {
                     wait();
                 } catch(InterruptedException e){}
@@ -46,7 +47,11 @@ public class Control {
 
     public void finSalida (Barco barco) {
         salida--;
+        if (quierenSalir > 0)
+            quierenSalir--;
     }
 
-
+    public void barcoQuiereSalir () {
+        quierenSalir++;
+    }
 }

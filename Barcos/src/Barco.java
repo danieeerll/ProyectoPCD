@@ -11,6 +11,8 @@ public class Barco extends Thread {
 		this.direccion = direccion;
 		this.p = p;
 		this.c = c;
+		if (this.direccion == 0)
+			c.barcoQuiereSalir();
 	}
 
 	@Override
