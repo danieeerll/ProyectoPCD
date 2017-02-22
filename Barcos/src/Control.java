@@ -46,6 +46,7 @@ public class Control {
     }
 
     public void finSalida (Barco barco) {
+
         salida--;
         if (quierenSalir > 0)
             quierenSalir--;
