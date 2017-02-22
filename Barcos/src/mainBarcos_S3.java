@@ -3,7 +3,7 @@ public class mainBarcos_S3 {
 	public static void main(String[] args) {
 		Puerta p = new Puerta();
 		Control c = new Control();
-		Barco[] b = new Barco[20];
+		Barco[] b = new Barco[2002];
 		
 		for (int i = 0;i<10;i++) {
 			b[i] = new Barco(i, 0, p, c);
