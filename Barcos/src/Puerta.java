@@ -12,15 +12,11 @@ public class Puerta {
 
     public void entrar (Barco barco) {
         barco.c.permisoEntrada(barco);
-        System.out.printf("Clase puerta ENTRAR\n");
-
         barco.c.finEntrada(barco);
     }
 
     public void salir (Barco barco) {
         barco.c.permisoSalida(barco);
-        System.out.printf("Clase puerta SALIR\n");
-
         barco.c.finSalida(barco);
     }
 }
