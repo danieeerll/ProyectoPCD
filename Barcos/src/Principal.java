@@ -9,14 +9,15 @@ public class Principal {
 
         Puerta p = new Puerta(true);
         TorreControl control = new TorreControl(0, 0);
+        ZonaCarga zonaC = new ZonaCarga();
         List <Thread> Barcos = new ArrayList<>();
 
         int n;
         Random r = new Random(new Date().getTime());
 
-        for (int i=0;i<30;i++){
+        for (int i=0;i<5;i++){
             n = r.nextInt(2);
-            Barco b = new Barco(p, control, n, i);
+            Barco b = new Barco(p, control, zonaC, 0, i, true);
             Barcos.add(b);
             b.start();
         }
