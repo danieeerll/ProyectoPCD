@@ -4,7 +4,6 @@ public class TorreControl {
 	private int entrando;
 	private int saliendo;
 	private int quierensalir;
-
 	private LinkedList <Barco> esperandoS;
     private LinkedList <Barco> esperandoE;
 
